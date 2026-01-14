@@ -1752,6 +1752,12 @@ body.light-mode {
         text-align: center;
     }
 }
+@media (max-width: 480px){
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    
+}}
 
 @media (max-width: 480px) {
     .hero-buttons {
