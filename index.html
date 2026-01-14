@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harish's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Canvas for 3D Particles -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Mouse follower -->
+    <div class="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-glass">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HARISH'S<span class="logo-highlight">PORTFOLIO</span></span>
+                <div class="logo-glow"></div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-text="HOME">HOME</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link" data-text="SKILLS">SKILLS</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link" data-text="PROJECTS">PROJECTS</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-checkbox">
+                    <label for="theme-switch" class="theme-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="theme-ball"></div>
+                    </label>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="content-wrapper">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="parallax-layer layer-1" data-speed="0.1"></div>
+            <div class="parallax-layer layer-2" data-speed="0.3"></div>
+            <div class="parallax-layer layer-3" data-speed="0.5"></div>
+            <div class="parallax-layer layer-4" data-speed="0.7"></div>
+            
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <div class="hero-subtitle">
+                        <span class="subtitle-line"></span>
+                        <span>FULLSTACK DEVELOPER</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-word">CREATE</span>
+                        <span class="title-word">INNOVATE</span>
+                        <span class="title-word"><span class="title-highlight">ELEVATE</span></span>
+                    </h1>
+                    <p class="hero-description">
+                        I build immersive digital experiences with cutting-edge technologies,
+                        <span class="text-highlight">pushing boundaries</span> of what's possible on the web.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-neon">
+                            <span class="btn-text">VIEW PROJECTS</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span class="btn-text">CONTACT ME</span>
+                            <div class="btn-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="code-window">
+                                        <div class="window-header">
+                                            <span class="window-dot dot-red"></span>
+                                            <span class="window-dot dot-yellow"></span>
+                                            <span class="window-dot dot-green"></span>
+                                        </div>
+                                        <div class="window-content">
+                                            <pre><code class="code-snippet">const dev = new Developer({
+  name: "Harish Udhayan",
+  specialty: "Web & AI",
+  skills: ["React", "Three.js", "Node", "TensorFlow"],
+  philosophy: "Code with purpose"
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <div class="avatar-container">
+                                        <div class="avatar-frame">
+                                            <img src="images\mine.JPG" alt="Developer">
+                                            <div class="avatar-glow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line">
+                    <div class="scroll-dot"></div>
+                </div>
+                <span class="scroll-text">SCROLL</span>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="parallax-layer layer-5" data-speed="0.2"></div>
+            <div class="parallax-layer layer-6" data-speed="0.4"></div>
+            
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    <span class="title-text">ABOUT ME</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-cube">
+                    <div class="cube">
+                        <div class="cube-face front">
+                            <div class="cube-content">
+                                <h3>VISION</h3>
+                                <p>Creating immersive digital experiences that blend art and technology</p>
+                            </div>
+                        </div>
+                        <div class="cube-face back">
+                            <div class="cube-content">
+                                <h3>MISSION</h3>
+                                <p>Pushing web boundaries with innovative solutions</p>
+                            </div>
+                        </div>
+                        <div class="cube-face right">
+                            <div class="cube-content">
+                                <h3>PASSION</h3>
+                                <p>Code as creative expression</p>
+                            </div>
+                        </div>
+                        <div class="cube-face left">
+                            <div class="cube-content">
+                                <h3>FOCUS</h3>
+                                <p>Performance & user experience</p>
+                            </div>
+                        </div>
+                        <div class="cube-face top">
+                            <div class="cube-content">
+                                <h3>GROWTH</h3>
+                                <p>Continuous learning & adaptation</p>
+                            </div>
+                        </div>
+                        <div class="cube-face bottom">
+                            <div class="cube-content">
+                                <h3>IMPACT</h3>
+                                <p>Meaningful digital solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Digital Architect & Creative Developer</h3>
+                        <p>With over 7 years in the digital space, I specialize in creating boundary-pushing web experiences that combine technical excellence with artistic vision.</p>
+                        <p>My approach blends cutting-edge technologies with human-centered design to deliver solutions that are not only functional but emotionally resonant.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                            <div class="stat-bar"></div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="7">0</div>
+                            <div class="stat-label">Interns Completed</div>
+                            <div class="stat-bar"></div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label"></div>
+                            <div class="stat-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="parallax-layer layer-7" data-speed="0.3"></div>
+            <div class="parallax-layer layer-8" data-speed="0.6"></div>
+            
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02</span>
+                    <span class="title-text">TECHNICAL SKILLS</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-orbits">
+                    <div class="orbit orbit-1">
+                        <div class="orbit-path"></div>
+                        <div class="orbit-item" data-skill="React">
+                            <div class="orbit-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-2">
+                        <div class="orbit-path"></div>
+                        <div class="orbit-item" data-skill="Three.js">
+                            <div class="orbit-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                        </div>
+                        <div class="orbit-item" data-skill="Node.js">
+                            <div class="orbit-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-3">
+                        <div class="orbit-path"></div>
+                        <div class="orbit-item" data-skill="Python">
+                            <div class="orbit-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                        </div>
+                        <div class="orbit-item" data-skill="TensorFlow">
+                            <div class="orbit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                        <div class="orbit-item" data-skill="WebGL">
+                            <div class="orbit-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="center-circle">
+                        <div class="center-glow"></div>
+                        <span>SKILLS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-details">
+                    <div class="skill-card skill-card-active">
+                        <div class="skill-header">
+                            <h3 class="skill-title">Frontend Mastery</h3>
+                            <div class="skill-percentage">95%</div>
+                        </div>
+                        <div class="skill-description">
+                            Advanced React, Vue.js, modern CSS, WebGL, and interactive animations
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3 class="skill-title">Backend Development</h3>
+                            <div class="skill-percentage">88%</div>
+                        </div>
+                        <div class="skill-description">
+                            Node.js, Python, GraphQL, microservices, and cloud architecture
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3 class="skill-title">UI/UX Design</h3>
+                            <div class="skill-percentage">92%</div>
+                        </div>
+                        <div class="skill-description">
+                            User research, prototyping, design systems, and interaction design
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="parallax-layer layer-9" data-speed="0.2"></div>
+            <div class="parallax-layer layer-10" data-speed="0.5"></div>
+            
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03</span>
+                    <span class="title-text">FEATURED PROJECTS</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-slider">
+                <div class="slider-container">
+                    <div class="project-slide active">
+                        <div class="project-content">
+                            <div class="project-number">01</div>
+                            <h3 class="project-title">Neural Network Visualizer</h3>
+                            <p class="project-description">
+                                Interactive 3D visualization of neural networks using TensorFlow.js and Three.js with real-time training simulation.
+                            </p>
+                            <div class="project-tags">
+                                <span>AI</span>
+                                <span>Three.js</span>
+                                <span>TensorFlow</span>
+                                <span>WebGL</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                <span>View Case Study</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Visualization">
+                                <div class="image-overlay"></div>
+                                <div class="project-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-slide">
+                        <div class="project-content">
+                            <div class="project-number">02</div>
+                            <h3 class="project-title">Quantum Dashboard</h3>
+                            <p class="project-description">
+                                Real-time data visualization dashboard with particle physics simulations and quantum computing metrics.
+                            </p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>WebSockets</span>
+                                <span>Physics</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                <span>View Case Study</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quantum Dashboard">
+                                <div class="image-overlay"></div>
+                                <div class="project-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-slide">
+                        <div class="project-content">
+                            <div class="project-number">03</div>
+                            <h3 class="project-title">AR Web Experience</h3>
+                            <p class="project-description">
+                                Browser-based augmented reality experience using WebXR and 3D model rendering with gesture controls.
+                            </p>
+                            <div class="project-tags">
+                                <span>WebXR</span>
+                                <span>A-Frame</span>
+                                <span>3D Modeling</span>
+                                <span>AR</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                <span>View Case Study</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AR Experience">
+                                <div class="image-overlay"></div>
+                                <div class="project-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="slider-dot active"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                    </div>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="parallax-layer layer-11" data-speed="0.1"></div>
+            
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04</span>
+                    <span class="title-text">GET IN TOUCH</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="email" id="email" required>
+                                <label for="email">Email Address</label>
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-container">
+                                <textarea id="message" rows="5" required></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="submit-text">SEND MESSAGE</span>
+                            <div class="submit-loader"></div>
+                            <div class="submit-glow"></div>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>harishudhayan49@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+91 8870661247</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Madurai, TamilNadu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>HARISH<span class="logo-highlight"></span></span>
+            </div>
+            <div class="footer-text">
+                <p>Built with passion and advanced web technologies.</p>
+            </div>
+            <a href="#home" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+                <span>TOP</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
